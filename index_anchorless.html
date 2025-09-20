@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>БригАдрес — найдём проверенных подрядчиков</title>
+  <meta name="description" content="Сервис подбора проверенных подрядчиков: поиск бригад, юрпроверка, сопровождение сделки. Сэкономим до 70% времени.">
+  <meta property="og:title" content="БригАдрес — найдём проверенных подрядчиков">
+  <meta property="og:description" content="Сэкономим до 70% времени на поиск и переговоры. Гарантируем надёжность партнёров.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero1.jpg">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notice{background:#10361d;color:#d3f7df;border:1px solid #28a74599;padding:10px;border-radius:10px;margin-top:10px;display:none}
+    .notice.error{background:#3a1313;color:#ffd8d8;border-color:#ff4d4d99}
+  </style>
+  <script>
+  // Kill hash ASAP to prevent mobile autoscroll to #form
+  (function(){
+    try { if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } } catch(e){}
+    if (location.hash) {
+      try { history.replaceState(null, document.title, location.pathname + location.search); } catch(e){}
+      window.scrollTo(0,0);
+    }
+    // Also block future hash changes (we use JS scrolling instead)
+    window.addEventListener('hashchange', function(ev){ 
+      ev.preventDefault();
+      try { history.replaceState(null, document.title, location.pathname + location.search); } catch(e){}
+      window.scrollTo(0,0);
+    });
+  })();
+  </script>
+</head>
+<body>
+  <header class="header container">
+    <a class="brand" href="#" data-scroll="top"><img src="assets/logo.png" alt="БригАдрес логотип"><span>БригАдрес</span></a>
+    <nav class="menu">
+      <a href="#" data-scroll="about">О сервисе</a>
+      <a href="#" data-scroll="why">Почему мы</a>
+      <a href="#" data-scroll="form">Заявка</a>
+      <a href="#" data-scroll="faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" data-section="top">
+      <div>
+        <h1>Найдём проверенных подрядчиков — быстро и без рисков</h1>
+        <p class="lead">Сэкономим до 70% времени на поиск и переговоры. Гарантируем надёжность партнёров.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" data-scroll="form">Получить консультацию</a>
+          <a class="btn btn-ghost" href="#" data-scroll="about">Как это работает</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/hero1.jpg" alt="Строительная бригада — иллюстрация">
+      </div>
+    </section>
+
+    <section class="section container alt" data-section="about">
+      <h2>Как мы работаем?</h2>
+      <div class="grid">
+        <article class="card"><div class="icon">🔍</div><h3>Поиск подрядчиков</h3><p>Подберём строительные бригады под ваши задачи и бюджет.</p></article>
+        <article class="card"><div class="icon">⚖️</div><h3>Юридический аудит</h3><p>Проверим договоры, лицензии и судебные риски исполнителей.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Сопровождение сделки</h3><p>Организуем переговоры и контроль исполнения работ.</p></article>
+      </div>
+    </section>
+
+    <section class="section container" data-section="segment">
+      <h2>Вам подойдёт наш сервис, если вы:</h2>
+      <div class="columns-3">
+        <article class="card">
+          <h3>👷‍♂️ Частный мастер или бригада</h3>
+          <p>Хотите стабильный поток заказов без поиска клиентов и риска неоплаты.</p>
+          <ul class="bullets"><li>Получайте готовые заявки</li><li>Работайте без простоев</li><li>Платите только за результат</li></ul>
+        </article>
+        <article class="card">
+          <h3>🏠 Владелец квартиры или дома</h3>
+          <p>Планируете ремонт и ищете проверенных исполнителей без риска и переплат.</p>
+          <ul class="bullets"><li>Экономьте время на поиске</li><li>Выбирайте из проверенных вариантов</li><li>Получайте гарантии по договору</li></ul>
+        </article>
+        <article class="card">
+          <h3>🏢 Компания-подрядчик</h3>
+          <p>Хотите масштабировать бизнес и оптимизировать расходы на маркетинг.</p>
+          <ul class="bullets"><li>Увеличивайте количество заявок</li><li>Снижайте стоимость привлечения клиента</li><li>Работайте с предсказуемой загрузкой</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container alt" data-section="why">
+      <h2>Почему клиенты выбирают нас?</h2>
+      <p class="lead">Мы экономим самое главное — ваше время, деньги и нервы на каждом этапе сотрудничества.</p>
+      <div class="grid">
+        <article class="card"><h3>🛡️ Гарантия надёжности</h3><p>Тщательно проверяем документы и отзывы каждого подрядчика. Вы работаете только с проверенными исполнителями.</p></article>
+        <article class="card"><h3>⚡ Экономия времени</h3><p>Подберём до 3 вариантов под ваши задачи за 24 часа.</p></article>
+        <article class="card"><h3>💰 Фиксированная стоимость</h3><p>Никаких скрытых комиссий и доплат. Вы знаете сумму услуг до начала работ.</p></article>
+        <article class="card"><h3>🤝 Посредник в спорах</h3><p>Помогаем урегулировать недопонимание с подрядчиком на всех этапах работ.</p></article>
+      </div>
+    </section>
+
+    <section class="section container" data-section="steps">
+      <h2>3 шага к надёжному партнёру</h2>
+      <div class="stepper">
+        <div class="step"><strong>Заявка</strong> — оставьте запрос через форму.</div>
+        <div class="step"><strong>Подбор</strong> — согласуем с вами 3 лучших варианта.</div>
+        <div class="step"><strong>Сделка</strong> — организуем встречу и контроль исполнения.</div>
+      </div>
+    </section>
+
+    <section class="section container alt" data-section="form">
+      <h2>Готовы начать? Оставьте контакты — перезвоним за 30 минут!</h2>
+      <form id="leadForm" class="form" method="POST" action="https://formspree.io/f/FORM_ID">
+        <div class="form-row"><label for="name">Имя</label><input id="name" name="name" type="text" required></div>
+        <div class="form-row"><label for="contact">Телефон или Email</label><input id="contact" name="contact" type="text" required></div>
+        <div class="form-row"><label for="type">Тип запроса</label>
+          <select id="type" name="type"><option>Нужен подрядчик</option><option>Юридическая проверка</option><option>Другое</option></select>
+        </div>
+        <div class="form-row"><label for="message">Сообщение</label><textarea id="message" name="message" rows="4"></textarea></div>
+        <button class="btn btn-primary" type="submit">📞 Обсудить проект</button>
+        <p class="small">Нажимая кнопку, вы соглашаетесь с <a href="https://disk.yandex.ru/d/QJ3SUIqIjdtrEg" target="_blank">политикой конфиденциальности</a>.</p>
+        <div id="noticeOk" class="notice">Спасибо! Заявка отправлена.</div>
+        <div id="noticeErr" class="notice error">Ошибка отправки. Попробуйте снова или напишите на <a href="mailto:brigadres@mail.ru">brigadres@mail.ru</a>.</div>
+      </form>
+    </section>
+
+    <section class="section container faq" data-section="faq">
+      <h2>Часто задаваемые вопросы</h2>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#" data-scroll="top"><img src="assets/logo.png" alt=""><span>БригАдрес</span></a>
+        <p class="small">© <span id="year"></span> БригАдрес. Все права защищены.</p>
+        <p class="small">ИНН 470206635264 | ОГРН 325470400100411</p>
+      </div>
+      <div>
+        <p><strong>Контакты</strong><br>
+        Тел.: <a href="tel:+79334191597">8 (933) 419-15-97</a><br>
+        Email: <a href="mailto:brigadres@mail.ru">brigadres@mail.ru</a><br>
+        Telegram: <a href="https://t.me/BrigAdres" target="_blank">@BrigAdres</a><br>
+        ВК: <a href="https://vk.com/brigadres_club" target="_blank">vk.com/brigadres_club</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // Year in footer
+  document.addEventListener('DOMContentLoaded', () => {
+    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+  });
+
+  // Intercept all menu/button clicks to scroll via JS (no hashes)
+  (function(){
+    function scrollToSection(name){
+      const section = document.querySelector('[data-section="'+name+'"]');
+      if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-scroll]');
+      if (!a) return;
+      e.preventDefault();
+      const name = a.getAttribute('data-scroll');
+      scrollToSection(name);
+    });
+  })();
+
+  // Formspree fallback to mailto if FORM_ID not replaced
+  (function(){
+    const form = document.getElementById('leadForm');
+    const ok = document.getElementById('noticeOk');
+    const err = document.getElementById('noticeErr');
+    if (!form) return;
+    form.addEventListener('submit', async (e) => {
+      const action = form.getAttribute('action') || '';
+      const isFormspree = /formspree\.io\/f\//.test(action) && !/FORM_ID/.test(action);
+      if (!isFormspree) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const subject = encodeURIComponent('Заявка с лендинга БригАдрес');
+        const body = encodeURIComponent(
+          'Имя: ' + (data.get('name')||'') + '\n' +
+          'Контакт: ' + (data.get('contact')||'') + '\n' +
+          'Тип запроса: ' + (data.get('type')||'') + '\n\n' +
+          'Сообщение:\n' + (data.get('message')||'')
+        );
+        window.location.href = 'mailto:brigadres@mail.ru?subject=' + subject + '&body=' + body;
+      } else {
+        e.preventDefault();
+        try{
+          const formData = new FormData(form);
+          const res = await fetch(action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' }});
+          if (res.ok) { ok.style.display='block'; err.style.display='none'; form.reset(); }
+          else { throw new Error('Bad status'); }
+        }catch(_e){ ok.style.display='none'; err.style.display='block'; }
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
